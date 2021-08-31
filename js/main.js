@@ -1,116 +1,83 @@
 $(function(){
-	$('.menu__btn').on('click', function(){
-		$(this).toggleClass('active');
-		$('.menu__list').toggleClass('active');
-		$('.header').toggleClass('gradient');
+	let menu = $('.menu__list');
+	let menuBtn = $('.menu__btn');
+	let menuLink = $('.menu__list-link');
+	let header = $('.header');
+	$(menuBtn).on('click', function () {
+		$(menu).toggleClass('open');
+		$(this).toggleClass('open');
+		$(header).toggleClass('gradient');
 	});
-	$(window).scroll(function () {
-		$('.menu__list').removeClass('active');
-		$('.header').removeClass('gradient');
-		$('.menu__btn').removeClass('active');
+	$(menuLink).on('click', function(){
+		$(menu).removeClass('open');
+		$(header).removeClass('gradient');
+		$(menuBtn).toggleClass('open');
 
-	});
-	let btn = $(".menu__btn");
-	let menu = $(".menu__list");
-
+	})
 	$(document).mouseup(function (e) {
-		if (!btn.is(e.target) && btn.has(e.target).length === 0 &&
+		if (!menuBtn.is(e.target) && menuBtn.has(e.target).length === 0 &&
 			!menu.is(e.target) && menu.has(e.target).length === 0
 		) {
-			menu.removeClass('active');
-			$('.header').removeClass('gradient');
-			$('.menu__btn.active').removeClass('active');
+			menu.removeClass('open');
+			$(header).removeClass('gradient');
+			$(menuBtn).removeClass('open');
 		}
 	});
-	$('.shop-slider').slick({
+	$(window).scroll(function () {
+	
+            $(menuBtn).removeClass('open');
+            $(menu).removeClass('open');
+			$(header).removeClass('gradient');
+    });
+	$(window).ready(function () {
+		if ($(window).width() < 551) {
+			$(".closed").toggleClass("show").children(".footer__list-title");
+
+	$(".footer__list-title").click(function(){
+	if ($(this).parent().hasClass("show")) {
+		$(".footer__list-item").addClass("show").children(".footer__dropdown-list").hide("medium");
+		$(this).parent().toggleClass("show").children(".footer__dropdown-list").slideToggle("medium");
+		}
+	
+	else {
+		$(this).parent().toggleClass("show").children(".footer__dropdown-list").slideToggle("medium");
+		}
+	});
+
+		}
+	});
+	
+	if ($(window).width() > 401) {
+				$('.shop-slider').children('.shop-slider__item:nth-child(3n+2)').addClass('shop-slider__item--center')
+
+	}
+	$('.shop-slider').slick(
+		{
 		slidesToShow:3,
 		slidesToScroll: 3,
 		autoplay: true,
 		autoplaySpeed: 2000,
 		arrows: false,
 		responsive: [{
-			breakpoint: 1201,
+			breakpoint: 551,
 			settings: {
 				slidesToShow: 2,
 			}
 		},
 		{
-			breakpoint: 901,
-			settings: {
-			slidesToShow: 3,
-				}
-		},
-		{
-			breakpoint: 701,
-			settings: {
-			slidesToShow: 2,
-				}
-		},
-		{
-			breakpoint: 451,
+			breakpoint: 401,
 			settings: {
 			slidesToShow: 1,
-			centerMode:true,
-			centerPadding: "70px",
+			slidesToScroll: 1,
 				}
-		}
+		},
 	]
-	});
+	}
+	);
 	
-	if ($(window).width() < 1201) {
-		$('.products__items-extra').slick({
-		centerMode: true,
-		centerPadding: '90px',
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		slidesToShow: 3,
-		swipe: true,
-		responsive: [{
-			breakpoint: 1001,
-			settings: {
-				slidesToShow: 2,
-				centerPadding: '150px',
-
-			}
-		},
-	{
-		breakpoint: 851,
-		settings: {
-			slidesToShow: 2,
-				centerPadding: '80px',
-		}
-	},
-{
-	breakpoint: 701,
-		settings: {
-			slidesToShow: 2,
-				centerMode: false,
-		}
-},
-{
-	breakpoint: 602,
-		settings: {
-			slidesToShow: 1,
-				centerMode: false,
-		}
-},
-
-]
-		
-});
-		$('.products__items-extra .products__item').addClass('products__item-extra');
-		};
-	if ($(window).width() < 1101) {
-		$('.how-to__title span').css('font-size', '70px');
-		};
-		if ($(window).width() < 1001) {
-			$('.how-to__title span').css('font-size', '50px');
-			};
-			
-			if ($(window).width() < 501) {
-				$('.shop-slider__item').removeClass('shop-slider__item--center');
-				};
+	if ($(window).width() < 501) {
+		$('.shop-slider__item').removeClass('shop-slider__item--center');
+	};
 	
 
 	$('.about-slider').slick({
@@ -128,37 +95,158 @@ $(function(){
 		dots: false,
 		slidesToShow: 1,
 	});
-	let mattersImg = $('.matters__img');
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > mattersImg.offset().top - 700) {
-			mattersImg.addClass('anim');
-		}
-	});
-	
-	let mattersImg1 = $('.matters__img-pill');
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > mattersImg1.offset().top - 120) {
-			mattersImg1.addClass('anim');
-		}
-	});
-	let howTo = $('.how-to__subtitle');
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > howTo.offset().top - 220) {
-			howTo.addClass('anim');
-		}
-	});
-	let howToLink = $('.how-to__text-link');
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > howToLink.offset().top - 600) {
-			howToLink.addClass('anim');
-		}
-	});
-	let subBg = $('.subscription__items-wrapper');
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > subBg.offset().top - 800) {
-			subBg.addClass('anim');
+
+	if ($(window).width() < 769) {
+		
+		$(".matters__bottle--2").html('<img src="images/bottle-1.png" alt="#">')
+	} else {
+		$(window).scroll(function(){
+		if($(this).scrollTop()> $('.matters').offset().top - 200) {
+			$('.matters__bg').addClass('anim');	
 		}
 	});
 
+	}
+	
+	$(document).ready(function() {
+		$(".products__colors-item").on('click', function() {
+		  $(".products__colors-item").each(function() {
+			$(this).removeClass('active');
+		  });
+		  $(this).addClass('active');
+		});
+	  });
+
 });
 new WOW().init();
+
+$(function(){
+
+	let video = document.getElementById('about-video');
+	let videoBtn = document.getElementById('about-video-btn');
+	$(video).on('click', function(){
+		if (video.paused) {
+			video.play();
+			videoBtn.innerHTML = '<img class="about__video-icon about__video-pause" src="images/about-btn.png" alt="pause">';
+			$('.about__content').hide('slow');
+		  } else {
+			video.pause();
+			videoBtn.innerHTML = '<img class="about__video-icon about__video-play" src="images/about-btn.png" alt="play">';
+			$('.about__content').show('slow');
+		  } 
+	});
+	let videoWrapper = $('.about__video-wrapper');
+
+	$(videoWrapper).mouseover(function(){
+		$('.about__video-pause').css('opacity', '1');
+
+	});
+	$(videoWrapper).mouseleave(function(){
+		$('.about__video-pause').css('opacity', '0');
+	});
+});
+
+window.onload = function () {
+	document.addEventListener('click', documentActions);
+	
+	
+	function documentActions(e) {
+		const targetElement = e.target;
+		if (targetElement.classList.contains('products__more')) {
+			getProducts(targetElement);
+			e.preventDefault();
+		}		
+	}
+		async function getProducts(button) {
+	
+			if (!button.classList.contains('_hold')) {
+				button.classList.add('_hold');
+
+				const file = "json/products.json";
+				let response = await fetch(file, {
+					method: 'GET'
+				});
+				if(response.ok) {
+					let result = await response.json();
+					loadProducts(result);
+					button.classList.remove('_hold');
+					button.remove();
+				} 
+				
+				else {
+					alert('Oшибка');
+				}
+			};
+			function loadProducts(data){
+				
+				const productsItems = document.querySelector('.products__items');
+				
+				data.products.forEach(item => {
+					const productId = item.id;
+					const productUrl = item.url;
+					const productImage = item.image;
+					const productLabel = item.label;
+					const productTitle = item.title;
+					const productSubtitle = item.subtitle;
+					const productPriceCurrent = item.priceCurrent;
+					const productPriceOld = item.priceOld;
+					const productRating = item.rating;
+					const productReviews = item.reviews;
+					const productColor1 = item.color1;
+					const productColor2 = item.color2;
+					const productColor3 = item.color3;
+					
+						
+let productTemplateStart = `<div data-pid="${productId}" class="products__item">`;
+let productTemplateEnd = `</div>`;
+let productTemplateImage = `
+<a class="products__img-link" href="${productUrl}">
+<img class="products__img" src="images/content/products-${productImage}" alt="${productTitle}">
+<div class="products__label">
+<p class="products__label-text">${productLabel}</p>
+</div>
+</a>
+`;
+
+let productTemplateBodyStart = `<div class="products__body">`;
+let productTemplateBodyEnd = `</div>`;
+let productTemplateContent = `
+
+		<h6 class="products__title">${productTitle}</h6>
+		<p class="products__subtitle">${productSubtitle}</p>
+		<div class="products__info">
+			<a class="products__info-rating" href="#">Rated ${productRating} out of 5</a>
+			<a class="products__info-reviews" href="#">${productReviews} Reviews</a>
+		</div>
+		<ul class="products__colors">
+			<li ${productColor1}></li>
+			<li ${productColor2}></li>
+			<li ${productColor3}></li>
+		</ul>
+		<div class="products__rating">
+			<span class="products__rating-item" style="width: ${productRating / 100 * 20 * 100}%"></span>
+		</div>	
+		<div class="products__price">
+			<div class="products__price-current">&#36;${productPriceCurrent}</div>
+			<div class="products__price-old">&#36;${productPriceOld}</div>
+		</div>
+
+`;
+
+let productTemplateBody = '';
+productTemplateBody += productTemplateBodyStart;
+productTemplateBody += productTemplateContent;
+productTemplateBody += productTemplateBodyEnd;
+
+let productTemplate = '';
+productTemplate += productTemplateStart;
+productTemplate += productTemplateImage;
+productTemplate += productTemplateBody;
+productTemplate += productTemplateEnd;
+			productsItems.insertAdjacentHTML('beforeend', productTemplate);
+			})
+	
+			} 
+		}
+
+			} 

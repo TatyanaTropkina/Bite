@@ -1,0 +1,53 @@
+
+{
+	"products": [
+		{
+			"id": "product-7",
+			"url": "#",
+			"image": "2.jpg",
+			"label": "",
+			"title": "Bamboo Toothbrush",
+			"subtitle": "Two-pack",
+			"priceCurrent": "20",
+			"priceOld": "35",
+			"rating": "4.9",
+			"reviews": "10,368",
+			"colo1": "",
+			"colo2": "",
+			"colo3": ""
+		},
+		{
+			"id": "product-8",
+			"url": "#",
+			"image": "6.jpg",
+			"label": "&nbsp;&nbsp; save 30% &nbsp;&nbsp;",
+			"title": "Mouthwash Bits",
+			"subtitle": "5-Month supply",
+			"priceCurrent": "10",
+			"priceOld": "15",
+			"rating": "3",
+			"reviews": "10",
+			"color1": "class='products__colors-item'style='background-color: #85CCC8'",
+			"color2": "class='products__colors-item'style='background-color: #8996B7'",
+			"color3": "class='products__colors-item'style='background-color: #FFBBB8'"
+
+		},
+		{
+			"id": "product-9",
+			"url": "#",
+			"image": "3.jpg",
+			"label": "",
+			"title": "Daily Habits Kit",
+			"subtitle": "5-Piece Oral Care Set",
+			"priceCurrent": "25",
+			"priceOld": "30",
+			"rating": "2",
+			"reviews": "354",
+			"color1": "class='products__colors-item'style='background-color: #FAD42D'",
+			"color2": "class='products__colors-item'style='background-color: #FA5FE2'",
+			"color3": "class='products__colors-item'style='background-color: #1FADA5'"
+
+		}
+
+	]
+}
