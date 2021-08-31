@@ -1,638 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Bite</title>
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-	<header class="header">
-		<div class="container">
-			<div class="header__top">
-				<nav class="menu">
-					<div class="menu__btn">
-						<span class="menu__btn-line"></span>
-					</div>
-					<ul class="menu__list">
-						<li class="menu__list-item">
-							<a class="menu__list-link" href="#">Shop</a>
-						</li>
-						<li class="menu__list-item">
-							<a class="menu__list-link" href="#">About us</a>
-						</li>
-						<li class="menu__list-item">
-							<a class="menu__list-link" href="#">Sustainability</a>
-						</li>
-					</ul>
-				</nav>
-				<a class="logo header__logo" href="#">
-					<img class="logo__img" src="images/icons/logo.svg" alt="logo">
-				</a>
-				<div class="header__actions">
-					<a class="header__action-cart" href="#">
-						<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip0)">
-								<path
-									d="M37.6227 3.65031C37.4693 3.43558 37.2239 3.31288 36.9479 3.31288H14.8926L14.2485 0.644172C14.1564 0.245399 13.819 0 13.4203 0H9.52455C9.06442 0 8.66565 0.368098 8.66565 0.858896C8.66565 1.34969 9.06442 1.71779 9.52455 1.71779H12.7454L17.3773 20.8896C17.4693 21.2883 17.8068 21.5337 18.2055 21.5337H19.3405C18.8804 21.8712 18.543 22.4233 18.543 23.0675C18.543 24.1411 19.4018 25 20.4755 25C21.5491 25 22.408 24.1411 22.408 23.0675C22.408 22.4233 22.0706 21.9018 21.6104 21.5337H29.3712C28.911 21.8712 28.5736 22.4233 28.5736 23.0675C28.5736 24.1411 29.4325 25 30.5061 25C31.5798 25 32.4387 24.1411 32.4387 23.0675C32.4387 22.4233 32.1012 21.9018 31.6411 21.5337H32.1933C32.6534 21.5337 33.0522 21.1656 33.0522 20.6748C33.0522 20.2147 32.6534 19.816 32.1933 19.816H18.8804L18.3896 17.8221H33.8497C34.2485 17.8221 34.5859 17.546 34.6779 17.1779L37.7761 4.3865C37.8374 4.11043 37.7761 3.83436 37.6227 3.65031ZM23.4203 11.8405L23.1135 9.29448H28.0828L27.7761 11.8405H23.4203ZM27.5614 13.5583L27.2546 16.1043H23.911L23.6043 13.5583H27.5614ZM16.3344 9.29448H21.3957L21.7025 11.8405H16.9479L16.3344 9.29448ZM22.8988 7.57669L22.592 5.03067H28.5736L28.2669 7.57669H22.8988ZM20.8742 5.03067L21.181 7.57669H15.9049L15.2914 5.03067H20.8742ZM17.3466 13.5583H21.8865L22.1933 16.1043H17.9601L17.3466 13.5583ZM28.9724 16.1043L29.2791 13.5583H33.7884L33.1749 16.1043H28.9724ZM34.2178 11.8405H29.4939L29.8006 9.29448H34.8313L34.2178 11.8405ZM35.2301 7.57669H29.9847L30.2914 5.03067H35.8436L35.2301 7.57669Z" />
-							</g>
-							<defs>
-								<clipPath id="clip0">
-									<rect width="25" height="25" fill="white" />
-								</clipPath>
-							</defs>
-						</svg>
-					</a>
-					<a class="header__action-avatar" href="#">
-						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M14 0C6.27 0 0 6.27 0 14C0 17.66 1.44 21.18 4 23.8C4.33 24.13 4.67 24.44 5.03 24.74C5.39 25.05 5.76 25.33 6.16 25.59C10.89 28.8 17.11 28.8 21.84 25.59C22.24 25.33 22.61 25.05 22.97 24.74C23.33 24.44 23.67 24.13 24 23.8C29.41 18.28 29.32 9.41 23.8 4C21.18 1.44 17.66 0 14 0ZM14 26C11.07 26.01 8.25 24.94 6.06 22.99C6.62 18.6 10.63 15.5 15.01 16.06C18.63 16.52 21.47 19.37 21.94 22.99C19.75 24.94 16.93 26.01 14 26ZM11 11C11 9.34 12.34 8 14 8C15.66 8 17 9.34 17 11C17 12.66 15.66 14 14 14C12.35 14 11 12.65 11 11ZM23.6 21.2C22.71 18.16 20.43 15.72 17.45 14.62C19.45 12.71 19.52 9.55 17.62 7.55C15.72 5.55 12.55 5.48 10.55 7.38C8.55 9.28 8.48 12.45 10.38 14.45C10.43 14.51 10.49 14.56 10.55 14.62C7.57 15.72 5.29 18.16 4.4 21.2C0.42 15.9 1.5 8.38 6.8 4.4C12.1 0.42 19.62 1.5 23.6 6.8C26.8 11.07 26.8 16.93 23.6 21.2Z" />
-						</svg>
-					</a>
-				</div>
-			</div>
-			<div class="header__content">
-				<h1 class="header__title">
-					Toothpaste, reinvented
-				</h1>
-				<p class="header__text">
-					The only plastic-free and clean way to replace the paste you've used your whole life.
-				</p>
-				<a class="btn btn-white header__btn" href="#">shop now</a>
-			</div>
-		</div>
-	</header>
-	<div class="main">
-		<div class="labels">
-			<div class="container">
-				<div class="labels__items">
-					<img class="labels__img" src="images/icons/label-1.png" alt="#">
-					<img class="labels__img" src="images/icons/label-2.png" alt="#">
-					<img class="labels__img" src="images/icons/label-3.png" alt="#">
-					<img class="labels__img" src="images/icons/label-4.png" alt="#">
-					<img class="labels__img" src="images/icons/label-5.png" alt="#">
-					<img class="labels__img" src="images/icons/label-6.png" alt="#">
-					<img class="labels__img" src="images/icons/label-7.png" alt="#">
-					<img class="labels__img" src="images/icons/label-8.png" alt="#">
-					<img class="labels__img" src="images/icons/label-9.png" alt="#">
-					<img class="labels__img" src="images/icons/label-10.png" alt="#">
-				</div>
-			</div>
-		</div>
-		<div class="shop">
-			<div class="container">
-				<p class="shop__text">We make your daily routine more sustainable with products that are plastic-free,
-					cruelty-free and made with clean ingredients.</p>
-				<p class="shop__descr">Plastic-free | Clean ingredients | Cruelty-free</p>
-				<div class="shop__inner">
-					<div class="shop__content">
-						<h5 class="shop__content-text">Meet the future of oral care.</h5>
-						<a class="btn btn-white shop__content-btn" href="#">Get started</a>
-					</div>
-					<div class="shop-slider">
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-1.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Toothpaste Bits</h6>
-								<p class="shop-slider__item-price">From &#36;7.50 / month</p>
-							</div>
-						</a>
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-2.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Mouthwash Bits</h6>
-								<p class="shop-slider__item-price">From &#36;5.00 / month</p>
-							</div>
-						</a>
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-3.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Whitening Gel</h6>
-								<p class="shop-slider__item-price">From &#36;5.00 / month</p>
-							</div>
-						</a>
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-2.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Toothpaste Bits</h6>
-								<p class="shop-slider__item-price">From &#36;7.50 / month</p>
-							</div>
-						</a>
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-3.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Mouthwash Bits</h6>
-								<p class="shop-slider__item-price">From &#36;5.00 / month</p>
-							</div>
-						</a>
-						<a class="shop-slider__item" href="#">
-							<img class="shop-slider__img" src="images/content/shop-1.jpg" alt="#">
-							<div class="shop-slider__info">
-								<h6 class="shop-slider__item-name">Whitening Gel</h6>
-								<p class="shop-slider__item-price">From &#36;5.00 / month</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<button class="btn btn-color shop__inner-btn">Shop all products</button>
-			</div>
-		</div>
-		<div class="about">
-			<div class="container">
-				<div class="about__inner">
-					<div class="about__video-wrapper">
-						<video class="about__video" loop="loop" preload="auto" id="about-video"
-							poster="images/video-wrapper.jpg">
-							<source src="video/video.mp4" type="video/mp4">
-							<source src="video/video.mp4" type="video/webm">
-						</video>
-						<div id="about-video-btn" class="about__video-btn">
-							<img class="about__video-icon" src="images/icons/about-btn.png" alt="play">
-						</div>
-						<div class="about__content">
-							<p class="about__text">Meet Lindsay and learn more about Bite</p>
-							<a class="btn btn-white about__btn" href="#">learn more</a>
-						</div>
-					</div>
-					<div class="about-slider__wrapper">
-						<div class="about-slider">
-							<div class="about-slider__item">
-								<img class="about-slider__logo" src="images/icons/about-logo.png" alt="#">
-								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>
-							</div>
-							<div class="about-slider__item">
-								<img class="about-slider__logo" src="images/icons/about-logo.png" alt="#">
-								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>
-							</div>
-							<div class="about-slider__item">
-								<img class="about-slider__logo" src="images/icons/about-logo.png" alt="#">
-								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>
-							</div>
-						</div>
-						<a class="about-slider__link" href="#">Get started — from $7.50/month</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="matters">
-			<div class="container">
-
-				<div class="matters__content">
-					<h2 class="title matters__title">No plastic <br> ever</h2>
-					<p class="text matters__text">We’ve delivered millions of smiles without a single plastic tube
-						entering a
-						landfill.</p>
-					<button class="btn btn-color matters__btn">Why this matters</button>
-
-					<div class="matters__bg">
-						<div class="matters__bottle matters__bottle--1">
-							<img src="images/bottle-1.png" alt="#">
-						</div>
-						<div class="matters__bottle matters__bottle--2">
-							<img src="images/bottle-2.png" alt="#">
-						</div>
-						<div class="matters__bottle matters__bottle--3">
-							<img src="images/bottle-3.png" alt="#">
-						</div>
-						<div class="matters__pill matters__pill--1">
-						</div>
-						<div class="matters__pill matters__pill--2">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="how-to">
-			<div class="container">
-				<div class="how-to__inner">
-					<div class="how-to__content">
-						<p class="how-to__subtitle">How to</p>
-						<h2 class="title how-to__title">Easy asbite,
-							<br>
-							brush, smile, <br>repeat
-						</h2>
-						<p class="text how-to__text">Bite down on your Bit
-							<br>
-							Brush with a wet toothbrush
-							<br>
-							Smile and watch it foam up like magic
-							<br>
-							Repeat twice a day, every day
-						</p>
-						<a class="how-to__link" href="#">Shop now</a>
-					</div>
-				</div>
-			</div>
-			<div class="how-to__img-wrapper">
-				<img class="how-to__img" src="images/how-to.gif" alt="#">
-			</div>
-		</section>
-		<div class="products">
-			<div class="container">
-				<div class="products__items">
-					<div class="products__item" data-pid="product-1">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-1.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text">&nbsp;&nbsp; save 38% &nbsp;&nbsp;</p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Fresh Mint</h6>
-							<p class="products__subtitle">toothpaste</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 4.9 out of 5</a>
-								<a class="products__info-reviews" href="#">10,368 Reviews</a>
-							</div>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 98%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;30</div>
-								<div class="products__price-old">&#36;48</div>
-							</div>
-						</div>
-					</div>
-					<div class="products__item" data-pid="product-2">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-2.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text"></p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Mouthwash Bits</h6>
-							<p class="products__subtitle">4-Month supply</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 5 out of 5</a>
-								<a class="products__info-reviews" href="#">368 Reviews</a>
-							</div>
-							<ul class="products__colors">
-								<li class="products__colors-item fuck" style="background-color: #FA5FE2"></li>
-								<li class="products__colors-item" style="background-color: #8996B7"></li>
-							</ul>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 100%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;20</div>
-								<div class="products__price-old">&#36;24</div>
-							</div>
-						</div>
-					</div>
-					<div class="products__item" data-pid="product-3">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-3.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text"></p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Whitening Gel</h6>
-							<p class="products__subtitle">One vial &bull; 28 applications</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 3.9 out of 5</a>
-								<a class="products__info-reviews" href="#">184 Reviews</a>
-							</div>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 78%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;24</div>
-								<div class="products__price-old"></div>
-							</div>
-						</div>
-					</div>
-					<div class="products__item" data-pid="product-4">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-4.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text"></p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Dental Floss</h6>
-							<p class="products__subtitle">Two-pack</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 3 out of 5</a>
-								<a class="products__info-reviews" href="#">257 Reviews</a>
-							</div>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 60%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;12</div>
-								<div class="products__price-old"></div>
-							</div>
-						</div>
-					</div>
-					<div class="products__item" data-pid="product-5">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-5.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text"></p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Bamboo Toothbrush</h6>
-							<p class="products__subtitle">Two-pack</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 4 out of 5</a>
-								<a class="products__info-reviews" href="#">1,453 Reviews</a>
-							</div>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 80%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;22</div>
-								<div class="products__price-old"></div>
-							</div>
-						</div>
-					</div>
-					<div class="products__item mi" data-pid="product-6">
-						<a class="products__img-link" href="#">
-							<img class="products__img" src="images/content/products-6.jpg" alt="#">
-							<div class="products__label">
-								<p class="products__label-text"></p>
-							</div>
-						</a>
-						<div class="products__body">
-							<h6 class="products__title">Daily Habits Kit</h6>
-							<p class="products__subtitle">5-Piece Oral Care Set</p>
-							<div class="products__info">
-								<a class="products__info-rating" href="#">Rated 4.9 out of 5</a>
-								<a class="products__info-reviews" href="#">16,144 Reviews</a>
-							</div>
-							<div class="products__rating">
-								<span class="products__rating-item" style="width: 98%"></span>
-							</div>
-							<div class="products__price">
-								<div class="products__price-current">&#36;48</div>
-								<div class="products__price-old">&#36;60</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="btn btn-white products__more">Show more</button>
-			</div>
-		</div>
-		<section class="started">
-			<img class="started__img" src="images/subscription-top.png" alt="#">
-			<div class="container">
-
-				<div class="started__content">
-					<h3 class="title started__title">Better for your wallet, better for our planet</h3>
-					<p class="text started__text">Our subscription is the most eco-friendly and affordable way to kick
-						the tube.
-					</p>
-					<a class="btn btn-color started__btn" href="#">Get started</a>
-					<p class="started__descr">Save 38% — starting from $7.50 per month</p>
-				</div>
-
-			</div>
-
-		</section>
-		<section class="toothpaste">
-			<div class="container">
-				<div class="toothpaste__items">
-					<div class="toothpaste__item toothpaste__item--1">
-						<h6 class="toothpaste__item-title">Choose your flavor</h6>
-						<p class="toothpaste__item-text">Choose from Fresh Mint or Activated Charcoal with Fresh
-							Mint.</p>
-					</div>
-					<div class="toothpaste__item toothpaste__item--2">
-						<h6 class="toothpaste__item-title">Get a refill every 4 months</h6>
-						<p class="toothpaste__item-text">We send you fresh Bits every 4 months so you never run
-							out
-							of
-							bits.</p>
-					</div>
-					<div class="toothpaste__item toothpaste__item--3">
-						<h6 class="toothpaste__item-title">Pause or cancel anytime</h6>
-						<p class="toothpaste__item-text">Going on vacation? You can adjust, postpone, or cancel
-							your
-							subscription at any time, hassle-free.</p>
-					</div>
-				</div>
-				<img src="images/toothpaste.png" alt="#" class="toothpaste__img">
-				<div class="toothpaste__content">
-					<h2 class="title toothpaste__title">One billion toothpaste tubes are thrown out each year</h2>
-					<p class="text toothpaste__text">We want to end this plastic waste, give you a healthier smile, and
-						build
-						the
-						world's most sustainable oral care company.</p>
-					<a class="toothpaste__link" href="#">Sustainability at Bite</a>
-				</div>
-			</div>
-		</section>
-
-		<div class="reviews">
-			<div class="container">
-				<div class="reviews__inner">
-					<div class="reviews__content">
-						<h2 class="title reviews__title">Hey. You make us smile, too!</h2>
-						<p class="text reviews__text">We believe in oral care products that are better for you, and the
-							planet.
-							Every product we make is thoughtfully formulated to keep you smiling bright.</p>
-						<a class="reviews__link" href="#">See more reviews</a>
-					</div>
-					<div class="reviews-slider">
-						<div class="reviews-slider__item">
-							<div class="reviews-slider__content">
-								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried
-								</h6>
-								<p class="reviews-slider__text">My teeth are very prone to being yellow from
-									medications,
-									and
-									the only whitening that would really do anything was Smile Sciences. This
-									Bite..."
-								</p>
-								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>
-							</div>
-						</div>
-						<div class="reviews-slider__item">
-							<div class="reviews-slider__content">
-								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried
-								</h6>
-								<p class="reviews-slider__text">My teeth are very prone to being yellow from
-									medications, and
-									the only whitening that would really do anything was Smile Sciences. This
-									Bite..."
-								</p>
-								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>
-							</div>
-						</div>
-						<div class="reviews-slider__item">
-							<div class="reviews-slider__content">
-								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried
-								</h6>
-								<p class="reviews-slider__text">My teeth are very prone to being yellow from
-									medications, and
-									the only whitening that would really do anything was Smile Sciences. This
-									Bite..."</p>
-								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="footer">
-		<div class="container">
-			<a class="logo" href="#">
-				<img src="images/icons/logo.svg" alt="logo">
-			</a>
-			<div class="footer__items">
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title">Subscriptions</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Berry Twist Club</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Fresh Mint with Activated Charcoal</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item">
-						<h6 class="footer__list-title footer__list-title-link">
-							<a class="footer__list-link" href="#">Follow Us</a></h6>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title">Single Bottles</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Fresh Mint</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Duo</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Mint Charcoal</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Berry Twist Toothpaste Bits</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title ">The Essentials</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Duo</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Mouthwash</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Floss, by Bite</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Brush, by Bite</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title">About Us</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Who we are</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Read the reviews</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Sustainability + Packaging</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Our ingredients</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">The Good Bits (our blog)</a>
-							</li>
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">FAQ</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title">Press</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<a class="footer__dropdown-link" href="#">Past press</a>
-							</li>
-							<li class="footer__dropdown-item footer__dropdown-item--press">For press or media inquiries,
-								please email
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__list-item closed">
-						<h6 class="footer__list-title">Need help?</h6>
-						<ul class="footer__dropdown-list">
-							<li class="footer__dropdown-item">
-								<p class="footer__dropdown-text">Check out our <a class="footer__dropdown-link--help"
-										href="#">help
-										center</a></p>
-							</li>
-							<li class="footer__dropdown-item">
-								<p class="footer__dropdown-email"> Need further assistance? Contact us <br><a
-										class="footer__dropdown-link"
-										href="mail-to:hello@bitetoothpastebits.com">hello@bitetoothpastebits.com</a>
-								</p>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-copyright">
-				<p class="footer-copyright__text">Copyright © 2021,
-					<a class="footer-copyright__text-link" href="#">Bite</a>
-					<a class="footer-copyright__text-link" href="#">Powered by Shopify</a>
-				</p>
-				<img class="footer-copyright__img" src="images/icons/footer.svg" alt="#">
-				<ul class="footer-copyright__list">
-					<li class="footer-copyright__item">
-						<a class="footer-copyright__link" href="#">Accessibility Statement</a>
-					</li>
-					<li class="footer-copyright__item">
-						<a class="footer-copyright__link" href="#">Privacy policy </a>
-					</li>
-					<li class="footer-copyright__item">
-						<a class="footer-copyright__link" href="#">Terms of service </a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="en"><head>	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<meta http-equiv="X-UA-Compatible" content="ie=edge">	<title>Bite</title>	<link rel="stylesheet" href="css/style.min.css"></head><body>	<header class="header">		<div class="container">			<div class="header__top">				<nav class="menu">					<div class="menu__btn">						<span class="menu__btn-line"></span>					</div>					<ul class="menu__list">						<li class="menu__list-item">							<a class="menu__list-link" href="#">Shop</a>						</li>						<li class="menu__list-item">							<a class="menu__list-link" href="#">About us</a>						</li>						<li class="menu__list-item">							<a class="menu__list-link" href="#">Sustainability</a>						</li>					</ul>				</nav>				<a class="logo header__logo" href="#">					<picture><source srcset="images/icons/logo.svg" type="image/webp"><img class="logo__img" src="images/icons/logo.svg" alt="logo"></picture>				</a>				<div class="header__actions">					<a class="header__action-cart" href="#">						<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">							<g clip-path="url(#clip0)">								<path									d="M37.6227 3.65031C37.4693 3.43558 37.2239 3.31288 36.9479 3.31288H14.8926L14.2485 0.644172C14.1564 0.245399 13.819 0 13.4203 0H9.52455C9.06442 0 8.66565 0.368098 8.66565 0.858896C8.66565 1.34969 9.06442 1.71779 9.52455 1.71779H12.7454L17.3773 20.8896C17.4693 21.2883 17.8068 21.5337 18.2055 21.5337H19.3405C18.8804 21.8712 18.543 22.4233 18.543 23.0675C18.543 24.1411 19.4018 25 20.4755 25C21.5491 25 22.408 24.1411 22.408 23.0675C22.408 22.4233 22.0706 21.9018 21.6104 21.5337H29.3712C28.911 21.8712 28.5736 22.4233 28.5736 23.0675C28.5736 24.1411 29.4325 25 30.5061 25C31.5798 25 32.4387 24.1411 32.4387 23.0675C32.4387 22.4233 32.1012 21.9018 31.6411 21.5337H32.1933C32.6534 21.5337 33.0522 21.1656 33.0522 20.6748C33.0522 20.2147 32.6534 19.816 32.1933 19.816H18.8804L18.3896 17.8221H33.8497C34.2485 17.8221 34.5859 17.546 34.6779 17.1779L37.7761 4.3865C37.8374 4.11043 37.7761 3.83436 37.6227 3.65031ZM23.4203 11.8405L23.1135 9.29448H28.0828L27.7761 11.8405H23.4203ZM27.5614 13.5583L27.2546 16.1043H23.911L23.6043 13.5583H27.5614ZM16.3344 9.29448H21.3957L21.7025 11.8405H16.9479L16.3344 9.29448ZM22.8988 7.57669L22.592 5.03067H28.5736L28.2669 7.57669H22.8988ZM20.8742 5.03067L21.181 7.57669H15.9049L15.2914 5.03067H20.8742ZM17.3466 13.5583H21.8865L22.1933 16.1043H17.9601L17.3466 13.5583ZM28.9724 16.1043L29.2791 13.5583H33.7884L33.1749 16.1043H28.9724ZM34.2178 11.8405H29.4939L29.8006 9.29448H34.8313L34.2178 11.8405ZM35.2301 7.57669H29.9847L30.2914 5.03067H35.8436L35.2301 7.57669Z" />							</g>							<defs>								<clipPath id="clip0">									<rect width="25" height="25" fill="white" />								</clipPath>							</defs>						</svg>					</a>					<a class="header__action-avatar" href="#">						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">							<path								d="M14 0C6.27 0 0 6.27 0 14C0 17.66 1.44 21.18 4 23.8C4.33 24.13 4.67 24.44 5.03 24.74C5.39 25.05 5.76 25.33 6.16 25.59C10.89 28.8 17.11 28.8 21.84 25.59C22.24 25.33 22.61 25.05 22.97 24.74C23.33 24.44 23.67 24.13 24 23.8C29.41 18.28 29.32 9.41 23.8 4C21.18 1.44 17.66 0 14 0ZM14 26C11.07 26.01 8.25 24.94 6.06 22.99C6.62 18.6 10.63 15.5 15.01 16.06C18.63 16.52 21.47 19.37 21.94 22.99C19.75 24.94 16.93 26.01 14 26ZM11 11C11 9.34 12.34 8 14 8C15.66 8 17 9.34 17 11C17 12.66 15.66 14 14 14C12.35 14 11 12.65 11 11ZM23.6 21.2C22.71 18.16 20.43 15.72 17.45 14.62C19.45 12.71 19.52 9.55 17.62 7.55C15.72 5.55 12.55 5.48 10.55 7.38C8.55 9.28 8.48 12.45 10.38 14.45C10.43 14.51 10.49 14.56 10.55 14.62C7.57 15.72 5.29 18.16 4.4 21.2C0.42 15.9 1.5 8.38 6.8 4.4C12.1 0.42 19.62 1.5 23.6 6.8C26.8 11.07 26.8 16.93 23.6 21.2Z" />						</svg>					</a>				</div>			</div>			<div class="header__content">				<h1 class="header__title">					Toothpaste, reinvented				</h1>				<p class="header__text">					The only plastic-free and clean way to replace the paste you've used your whole life.				</p>				<a class="btn btn-white header__btn" href="#">shop now</a>			</div>		</div>	</header>	<div class="main">		<div class="labels">			<div class="container">				<div class="labels__items">					<picture><source srcset="images/icons/label-1.webp" type="image/webp"><img class="labels__img" src="images/icons/label-1.png" alt="#"></picture>					<picture><source srcset="images/icons/label-2.webp" type="image/webp"><img class="labels__img" src="images/icons/label-2.png" alt="#"></picture>					<picture><source srcset="images/icons/label-3.webp" type="image/webp"><img class="labels__img" src="images/icons/label-3.png" alt="#"></picture>					<picture><source srcset="images/icons/label-4.webp" type="image/webp"><img class="labels__img" src="images/icons/label-4.png" alt="#"></picture>					<picture><source srcset="images/icons/label-5.webp" type="image/webp"><img class="labels__img" src="images/icons/label-5.png" alt="#"></picture>					<picture><source srcset="images/icons/label-6.webp" type="image/webp"><img class="labels__img" src="images/icons/label-6.png" alt="#"></picture>					<picture><source srcset="images/icons/label-7.webp" type="image/webp"><img class="labels__img" src="images/icons/label-7.png" alt="#"></picture>					<picture><source srcset="images/icons/label-8.webp" type="image/webp"><img class="labels__img" src="images/icons/label-8.png" alt="#"></picture>					<picture><source srcset="images/icons/label-9.webp" type="image/webp"><img class="labels__img" src="images/icons/label-9.png" alt="#"></picture>					<picture><source srcset="images/icons/label-10.webp" type="image/webp"><img class="labels__img" src="images/icons/label-10.png" alt="#"></picture>				</div>			</div>		</div>		<div class="shop">			<div class="container">				<p class="shop__text">We make your daily routine more sustainable with products that are plastic-free,					cruelty-free and made with clean ingredients.</p>				<p class="shop__descr">Plastic-free | Clean ingredients | Cruelty-free</p>				<div class="shop__inner">					<div class="shop__content">						<h5 class="shop__content-text">Meet the future of oral care.</h5>						<a class="btn btn-white shop__content-btn" href="#">Get started</a>					</div>					<div class="shop-slider">						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-1.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-1.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Toothpaste Bits</h6>								<p class="shop-slider__item-price">From &#36;7.50 / month</p>							</div>						</a>						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-2.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-2.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Mouthwash Bits</h6>								<p class="shop-slider__item-price">From &#36;5.00 / month</p>							</div>						</a>						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-3.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-3.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Whitening Gel</h6>								<p class="shop-slider__item-price">From &#36;5.00 / month</p>							</div>						</a>						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-2.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-2.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Toothpaste Bits</h6>								<p class="shop-slider__item-price">From &#36;7.50 / month</p>							</div>						</a>						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-3.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-3.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Mouthwash Bits</h6>								<p class="shop-slider__item-price">From &#36;5.00 / month</p>							</div>						</a>						<a class="shop-slider__item" href="#">							<picture><source srcset="images/content/shop-1.webp" type="image/webp"><img class="shop-slider__img" src="images/content/shop-1.jpg" alt="#"></picture>							<div class="shop-slider__info">								<h6 class="shop-slider__item-name">Whitening Gel</h6>								<p class="shop-slider__item-price">From &#36;5.00 / month</p>							</div>						</a>					</div>				</div>				<button class="btn btn-color shop__inner-btn">Shop all products</button>			</div>		</div>		<div class="about">			<div class="container">				<div class="about__inner">					<div class="about__video-wrapper">						<video class="about__video" loop="loop" preload="auto" id="about-video"							poster="images/video-wrapper.jpg">							<source src="video/video.mp4" type="video/mp4">							<source src="video/video.mp4" type="video/webm">						</video>						<div id="about-video-btn" class="about__video-btn">							<picture><source srcset="images/icons/about-btn.webp" type="image/webp"><img class="about__video-icon" src="images/icons/about-btn.png" alt="play"></picture>						</div>						<div class="about__content">							<p class="about__text">Meet Lindsay and learn more about Bite</p>							<a class="btn btn-white about__btn" href="#">learn more</a>						</div>					</div>					<div class="about-slider__wrapper">						<div class="about-slider">							<div class="about-slider__item">								<picture><source srcset="images/icons/about-logo.webp" type="image/webp"><img class="about-slider__logo" src="images/icons/about-logo.png" alt="#"></picture>								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>							</div>							<div class="about-slider__item">								<picture><source srcset="images/icons/about-logo.webp" type="image/webp"><img class="about-slider__logo" src="images/icons/about-logo.png" alt="#"></picture>								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>							</div>							<div class="about-slider__item">								<picture><source srcset="images/icons/about-logo.webp" type="image/webp"><img class="about-slider__logo" src="images/icons/about-logo.png" alt="#"></picture>								<p class="about-slider__text">"The Most Creative People in Business 2020"</p>							</div>						</div>						<a class="about-slider__link" href="#">Get started — from $7.50/month</a>					</div>				</div>			</div>		</div>		<section class="matters">			<div class="container">				<div class="matters__content">					<h2 class="title matters__title">No plastic <br> ever</h2>					<p class="text matters__text">We’ve delivered millions of smiles without a single plastic tube						entering a						landfill.</p>					<button class="btn btn-color matters__btn">Why this matters</button>					<div class="matters__bg">						<div class="matters__bottle matters__bottle--1">							<picture><source srcset="images/bottle-1.webp" type="image/webp"><img src="images/bottle-1.png" alt="#"></picture>						</div>						<div class="matters__bottle matters__bottle--2">							<picture><source srcset="images/bottle-2.webp" type="image/webp"><img src="images/bottle-2.png" alt="#"></picture>						</div>						<div class="matters__bottle matters__bottle--3">							<picture><source srcset="images/bottle-3.webp" type="image/webp"><img src="images/bottle-3.png" alt="#"></picture>						</div>						<div class="matters__pill matters__pill--1">						</div>						<div class="matters__pill matters__pill--2">						</div>					</div>				</div>			</div>		</section>		<section class="how-to">			<div class="container">				<div class="how-to__inner">					<div class="how-to__content">						<p class="how-to__subtitle">How to</p>						<h2 class="title how-to__title">Easy asbite,							<br>							brush, smile, <br>repeat						</h2>						<p class="text how-to__text">Bite down on your Bit							<br>							Brush with a wet toothbrush							<br>							Smile and watch it foam up like magic							<br>							Repeat twice a day, every day						</p>						<a class="how-to__link" href="#">Shop now</a>					</div>				</div>			</div>			<div class="how-to__img-wrapper">				<picture><source srcset="images/how-to.gif" type="image/webp"><img class="how-to__img" src="images/how-to.gif" alt="#"></picture>			</div>		</section>		<div class="products">			<div class="container">				<div class="products__items">					<div class="products__item" data-pid="product-1">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-1.webp" type="image/webp"><img class="products__img" src="images/content/products-1.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text">&nbsp;&nbsp; save 38% &nbsp;&nbsp;</p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Fresh Mint</h6>							<p class="products__subtitle">toothpaste</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 4.9 out of 5</a>								<a class="products__info-reviews" href="#">10,368 Reviews</a>							</div>							<div class="products__rating">								<span class="products__rating-item" style="width: 98%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;30</div>								<div class="products__price-old">&#36;48</div>							</div>						</div>					</div>					<div class="products__item" data-pid="product-2">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-2.webp" type="image/webp"><img class="products__img" src="images/content/products-2.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text"></p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Mouthwash Bits</h6>							<p class="products__subtitle">4-Month supply</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 5 out of 5</a>								<a class="products__info-reviews" href="#">368 Reviews</a>							</div>							<ul class="products__colors">								<li class="products__colors-item fuck" style="background-color: #FA5FE2"></li>								<li class="products__colors-item" style="background-color: #8996B7"></li>							</ul>							<div class="products__rating">								<span class="products__rating-item" style="width: 100%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;20</div>								<div class="products__price-old">&#36;24</div>							</div>						</div>					</div>					<div class="products__item" data-pid="product-3">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-3.webp" type="image/webp"><img class="products__img" src="images/content/products-3.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text"></p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Whitening Gel</h6>							<p class="products__subtitle">One vial &bull; 28 applications</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 3.9 out of 5</a>								<a class="products__info-reviews" href="#">184 Reviews</a>							</div>							<div class="products__rating">								<span class="products__rating-item" style="width: 78%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;24</div>								<div class="products__price-old"></div>							</div>						</div>					</div>					<div class="products__item" data-pid="product-4">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-4.webp" type="image/webp"><img class="products__img" src="images/content/products-4.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text"></p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Dental Floss</h6>							<p class="products__subtitle">Two-pack</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 3 out of 5</a>								<a class="products__info-reviews" href="#">257 Reviews</a>							</div>							<div class="products__rating">								<span class="products__rating-item" style="width: 60%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;12</div>								<div class="products__price-old"></div>							</div>						</div>					</div>					<div class="products__item" data-pid="product-5">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-5.webp" type="image/webp"><img class="products__img" src="images/content/products-5.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text"></p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Bamboo Toothbrush</h6>							<p class="products__subtitle">Two-pack</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 4 out of 5</a>								<a class="products__info-reviews" href="#">1,453 Reviews</a>							</div>							<div class="products__rating">								<span class="products__rating-item" style="width: 80%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;22</div>								<div class="products__price-old"></div>							</div>						</div>					</div>					<div class="products__item mi" data-pid="product-6">						<a class="products__img-link" href="#">							<picture><source srcset="images/content/products-6.webp" type="image/webp"><img class="products__img" src="images/content/products-6.jpg" alt="#"></picture>							<div class="products__label">								<p class="products__label-text"></p>							</div>						</a>						<div class="products__body">							<h6 class="products__title">Daily Habits Kit</h6>							<p class="products__subtitle">5-Piece Oral Care Set</p>							<div class="products__info">								<a class="products__info-rating" href="#">Rated 4.9 out of 5</a>								<a class="products__info-reviews" href="#">16,144 Reviews</a>							</div>							<div class="products__rating">								<span class="products__rating-item" style="width: 98%"></span>							</div>							<div class="products__price">								<div class="products__price-current">&#36;48</div>								<div class="products__price-old">&#36;60</div>							</div>						</div>					</div>				</div>				<button class="btn btn-white products__more">Show more</button>			</div>		</div>		<section class="started">			<picture><source srcset="images/subscription-top.webp" type="image/webp"><img class="started__img" src="images/subscription-top.png" alt="#"></picture>			<div class="container">				<div class="started__content">					<h3 class="title started__title">Better for your wallet, better for our planet</h3>					<p class="text started__text">Our subscription is the most eco-friendly and affordable way to kick						the tube.					</p>					<a class="btn btn-color started__btn" href="#">Get started</a>					<p class="started__descr">Save 38% — starting from $7.50 per month</p>				</div>			</div>		</section>		<section class="toothpaste">			<div class="container">				<div class="toothpaste__items">					<div class="toothpaste__item toothpaste__item--1">						<h6 class="toothpaste__item-title">Choose your flavor</h6>						<p class="toothpaste__item-text">Choose from Fresh Mint or Activated Charcoal with Fresh							Mint.</p>					</div>					<div class="toothpaste__item toothpaste__item--2">						<h6 class="toothpaste__item-title">Get a refill every 4 months</h6>						<p class="toothpaste__item-text">We send you fresh Bits every 4 months so you never run							out							of							bits.</p>					</div>					<div class="toothpaste__item toothpaste__item--3">						<h6 class="toothpaste__item-title">Pause or cancel anytime</h6>						<p class="toothpaste__item-text">Going on vacation? You can adjust, postpone, or cancel							your							subscription at any time, hassle-free.</p>					</div>				</div>				<picture><source srcset="images/toothpaste.webp" type="image/webp"><img src="images/toothpaste.png" alt="#" class="toothpaste__img"></picture>				<div class="toothpaste__content">					<h2 class="title toothpaste__title">One billion toothpaste tubes are thrown out each year</h2>					<p class="text toothpaste__text">We want to end this plastic waste, give you a healthier smile, and						build						the						world's most sustainable oral care company.</p>					<a class="toothpaste__link" href="#">Sustainability at Bite</a>				</div>			</div>		</section>		<div class="reviews">			<div class="container">				<div class="reviews__inner">					<div class="reviews__content">						<h2 class="title reviews__title">Hey. You make us smile, too!</h2>						<p class="text reviews__text">We believe in oral care products that are better for you, and the							planet.							Every product we make is thoughtfully formulated to keep you smiling bright.</p>						<a class="reviews__link" href="#">See more reviews</a>					</div>					<div class="reviews-slider">						<div class="reviews-slider__item">							<div class="reviews-slider__content">								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried								</h6>								<p class="reviews-slider__text">My teeth are very prone to being yellow from									medications,									and									the only whitening that would really do anything was Smile Sciences. This									Bite..."								</p>								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>							</div>						</div>						<div class="reviews-slider__item">							<div class="reviews-slider__content">								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried								</h6>								<p class="reviews-slider__text">My teeth are very prone to being yellow from									medications, and									the only whitening that would really do anything was Smile Sciences. This									Bite..."								</p>								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>							</div>						</div>						<div class="reviews-slider__item">							<div class="reviews-slider__content">								<h6 class="reviews-slider__title">Easiest and most effective whitener I’ve tried								</h6>								<p class="reviews-slider__text">My teeth are very prone to being yellow from									medications, and									the only whitening that would really do anything was Smile Sciences. This									Bite..."</p>								<div class="reviews-slider__descr">Katie S. · Whitening Gel - Subscription</div>							</div>						</div>					</div>				</div>			</div>		</div>	</div>	<footer class="footer">		<div class="container">			<a class="logo" href="#">				<picture><source srcset="images/icons/logo.svg" type="image/webp"><img src="images/icons/logo.svg" alt="logo"></picture>			</a>			<div class="footer__items">				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title">Subscriptions</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Berry Twist Club</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Fresh Mint with Activated Charcoal</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>							</li>						</ul>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item">						<h6 class="footer__list-title footer__list-title-link">							<a class="footer__list-link" href="#">Follow Us</a></h6>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title">Single Bottles</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Fresh Mint</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Duo</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Mint Charcoal</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Berry Twist Toothpaste Bits</a>							</li>						</ul>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title ">The Essentials</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Fresh Mint Club</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Duo</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Mouthwash</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Floss, by Bite</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Brush, by Bite</a>							</li>						</ul>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title">About Us</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Who we are</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Read the reviews</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Sustainability + Packaging</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Our ingredients</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">The Good Bits (our blog)</a>							</li>							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">FAQ</a>							</li>						</ul>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title">Press</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<a class="footer__dropdown-link" href="#">Past press</a>							</li>							<li class="footer__dropdown-item footer__dropdown-item--press">For press or media inquiries,								please email							</li>						</ul>					</li>				</ul>				<ul class="footer__list">					<li class="footer__list-item closed">						<h6 class="footer__list-title">Need help?</h6>						<ul class="footer__dropdown-list">							<li class="footer__dropdown-item">								<p class="footer__dropdown-text">Check out our <a class="footer__dropdown-link--help"										href="#">help										center</a></p>							</li>							<li class="footer__dropdown-item">								<p class="footer__dropdown-email"> Need further assistance? Contact us <br><a										class="footer__dropdown-link"										href="mail-to:hello@bitetoothpastebits.com">hello@bitetoothpastebits.com</a>								</p>							</li>						</ul>					</li>				</ul>			</div>			<div class="footer-copyright">				<p class="footer-copyright__text">Copyright © 2021,					<a class="footer-copyright__text-link" href="#">Bite</a>					<a class="footer-copyright__text-link" href="#">Powered by Shopify</a>				</p>				<picture><source srcset="images/icons/footer.svg" type="image/webp"><img class="footer-copyright__img" src="images/icons/footer.svg" alt="#"></picture>				<ul class="footer-copyright__list">					<li class="footer-copyright__item">						<a class="footer-copyright__link" href="#">Accessibility Statement</a>					</li>					<li class="footer-copyright__item">						<a class="footer-copyright__link" href="#">Privacy policy </a>					</li>					<li class="footer-copyright__item">						<a class="footer-copyright__link" href="#">Terms of service </a>					</li>				</ul>			</div>		</div>	</footer>	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	<script src="js/libs.min.js"></script>	<script src="js/main.js"></script></body></html>
