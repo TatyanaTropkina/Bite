@@ -1,0 +1,529 @@
+@media(max-width: 900px) {
+	.menu__list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 10px;
+		flex-direction: column;
+		margin: 70px 0 0 15px;
+		padding: 30px 20px 20px;
+		background-color: rgba(#fff, .5);
+		transform: translateX(-1000%);
+		transition: all .5s cubic-bezier(.39, .58, .57, 1);
+		z-index: 9;
+	}
+
+	.header {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgb(137, 159, 217);
+			background: linear-gradient(225deg, rgba(137, 159, 217, 1) 0%, rgba(146, 193, 223, 1) 35%, rgba(197, 174, 194, 1) 100%);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.header.gradient {
+		&::after {
+			transition: all 2s cubic-bezier(0, .93, .71, .98);
+			opacity: .7;
+			visibility: visible;
+		}
+	}
+
+	.menu__list.open {
+		transform: translateX(0);
+	}
+
+	.menu__list-item {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.menu__btn-line {
+		position: absolute;
+		width: 26px;
+		height: 4px;
+		background-color: $blue;
+		display: inline-block;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		border-radius: 4px;
+		transition: all .1s;
+	}
+
+	.menu__btn {
+		position: relative;
+		width: 32px;
+		height: 20px;
+		z-index: 10;
+		cursor: pointer;
+
+		&::after,
+		&::before {
+			position: absolute;
+			content: '';
+			height: 4px;
+			right: 0;
+			left: 0;
+			background-color: $blue;
+			border-radius: 4px;
+		}
+
+		&::after {
+			top: 0;
+		}
+
+		&::before {
+			bottom: 0;
+			width: 22px;
+		}
+	}
+
+	.menu__btn.open {
+		&::after {
+			transform: rotate(135deg) translate(6px, -5px);
+			transition: $transition;
+		}
+
+		&::before {
+			transform: rotate(-135deg) translate(6px, 5px);
+			width: 32px;
+			transition: $transition;
+		}
+
+		.menu__btn-line {
+			opacity: 0;
+			transform: rotate(35deg);
+		}
+	}
+
+	.header__title {
+		font-size: 50px;
+		margin-bottom: 10px;
+	}
+
+	.header__text {
+		font-size: 22px;
+		margin-bottom: 20px;
+		max-width: 448px;
+	}
+
+	.labels {
+		display: none;
+	}
+
+	.about__video {
+		height: 485px;
+	}
+
+	.how-to__title {
+		margin-bottom: 50px;
+		font-size: 54px;
+	}
+
+	.how-to__img {
+		height: 400px;
+	}
+
+	.toothpaste__title {
+		line-height: 116%;
+	}
+
+
+	.reviews__text {
+		font-size: 20px;
+		line-height: 171%;
+	}
+
+	.title {
+		font-size: 44px;
+	}
+
+	.matters__text {
+		font-size: 23px;
+		max-width: 566px;
+		margin: 0 auto 75px;
+	}
+}
+
+@media(max-width: 768px) {
+	.shop-slider__img {
+		max-width: 250px;
+	}
+
+	.shop__inner {
+		flex-direction: column;
+		margin-bottom: 30px;
+
+	}
+
+	.shop__content-text {
+		max-width: none;
+		margin: 0 auto 15px;
+
+	}
+
+	.shop__text {
+		max-width: none;
+		line-height: 148%;
+
+	}
+
+	.shop__descr {
+
+		margin-bottom: 30px;
+		font-size: 10px;
+	}
+
+	.shop__content {
+		margin: 0 auto 20px;
+	}
+
+	.shop-slider {
+		width: 100%;
+	}
+
+
+	.about {
+		padding: 50px 0;
+	}
+
+	.about__inner {
+
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.about__video {
+		height: 350px;
+	}
+
+	.about__text {
+		display: none;
+	}
+
+	.about__video-icon {
+
+		width: 69px;
+		height: 69px;
+	}
+
+	.about-slider__item {
+		padding: 30px 0 60px;
+	}
+
+	.matters {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+
+	.matters__bottle,
+	.matters__pill {
+
+		transform: translateY(0);
+
+		&::after,
+		&::before {
+
+			transform: translateY(0) rotate(0);
+			background-attachment: fixed;
+		}
+	}
+
+	.matters__bottle--3 {
+		display: none;
+	}
+
+	.matters__bottle--2 {
+		left: 75%;
+		right: -15%;
+		transform: rotateY(-180deg);
+		background-size: cover;
+
+		&::after {
+			background-image: url(../images/bottle-shadow-1.png);
+			top: 30px;
+			z-index: -4;
+		}
+
+		img {
+
+			max-width: 150px;
+		}
+	}
+
+	.matters__text {
+		max-width: none;
+		padding: 0 60px;
+	}
+
+	.how-to__text {
+		padding-left: 0;
+	}
+
+	.how-to__title {
+		margin-bottom: 20px;
+	}
+
+	.how-to__content {
+		width: 100%;
+	}
+
+	.how-to__link {
+		font-size: 20px;
+		margin-left: 0;
+	}
+
+	.how-to__subtitle {
+
+		margin-bottom: 16px;
+	}
+
+	.how-to__img {
+		height: 300px;
+	}
+
+	.how-to__img-wrapper {
+		width: 50%;
+	}
+
+	.how-to {
+		margin-bottom: 79px;
+	}
+
+	.products__img-link {
+
+		max-height: 350px;
+	}
+
+	.started__title {
+		margin-bottom: 32px;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+
+	.toothpaste__items {
+		grid-template-columns: repeat(2, minmax(200px, 300px));
+
+	}
+
+	.toothpaste__item--1 {
+		grid-column: 1/3;
+		max-width: 300px;
+		margin: 0 auto;
+		grid-gap: 30px;
+	}
+
+	.toothpaste {
+
+		padding: 0px 0 40px;
+		margin-bottom: -50px;
+	}
+
+	.toothpaste__img {
+		object-fit: cover;
+		width: 100%;
+	}
+
+	.toothpaste__title {
+		line-height: 94%;
+	}
+
+	.toothpaste__text {
+		line-height: 139%;
+	}
+
+	.reviews__inner {
+
+		grid-template-columns: minmax(200px, 1fr);
+	}
+
+	.reviews__content {
+		padding: 0;
+		max-width: none;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.reviews-slider,
+	.reviews-slider__title {
+		max-width: none;
+	}
+
+	.reviews-slider__content {
+		max-width: none;
+		margin: 0 auto;
+	}
+
+	.reviews-slider .slick-arrow {
+
+		width: 30px;
+		height: 30px;
+	}
+
+	.reviews-slider__text {
+
+		margin-bottom: 40px;
+	}
+
+	.matters__pill--1::after,
+	.matters__pill--2::after {
+		display: none;
+	}
+
+	.footer {
+
+		padding: 30px 0;
+	}
+
+	.footer__list-title,
+	.footer__list-link {
+		font-size: 20px;
+	}
+
+	.footer__dropdown-link,
+	.footer__dropdown-item--press,
+	.footer__dropdown-text {
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+
+	.footer__list-title {
+		padding-right: 20px;
+		cursor: pointer;
+
+		&::after {
+			display: block;
+		}
+	}
+
+	.footer__list-title-link {
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.footer__dropdown-list {
+		display: none;
+	}
+
+	.text {
+		font-size: 20px;
+	}
+
+	.shop-slider__item::after {
+		display: none;
+	}
+
+	.products__items {
+		grid-template-columns: repeat(2, minmax(250px, 430px));
+	}
+
+}
+
+@media (max-width: 500px) {
+	.header__title {
+		font-size: 35px;
+	}
+
+	.about__video {
+		height: 300px;
+	}
+
+	.about-slider__item {
+		padding: 30px 0;
+
+	}
+
+	.how-to__inner {
+		flex-direction: column-reverse;
+	}
+
+	.how-to__img-wrapper {
+		width: 100%;
+	}
+
+	.shop-slider__img {
+
+		max-height: 250px;
+		margin: 0 auto;
+	}
+
+	.shop__text {
+		font-size: 16px;
+		line-height: 130%;
+	}
+
+	.shop__content-btn {
+		font-size: 17px;
+	}
+
+	.shop__inner-btn {
+
+		font-size: 16px;
+	}
+
+	.shop-slider__item {
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.shop-slider__info {
+
+		left: 0;
+	}
+
+	.started__title {
+		margin-bottom: 30px;
+	}
+
+	.started {
+		padding-bottom: 90px;
+	}
+
+	.toothpaste__items {
+		grid-template-columns: 1fr;
+	}
+
+	.toothpaste__item--1 {
+		grid-column: 1/2;
+
+	}
+
+
+
+	.products__img-link {
+		max-height: 300px;
+	}
+
+	.reviews__text {
+		line-height: 145%;
+	}
+
+	.reviews {
+		padding: 20px 0;
+	}
+
+	.title {
+		font-size: 32px;
+	}
+
+	.products__items {
+		grid-template-columns: 1fr;
+	}
+}
